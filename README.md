@@ -1,5 +1,3 @@
-# Oi-Musang2
-SINI MAIN
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
@@ -7,42 +5,43 @@ SINI MAIN
   <title>Jual Beli Musang - Seru-seruan!</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Comic Neue', cursive;
       background-color: #fefbd8;
       color: #333;
-      overflow-x: hidden;
     }
     .container {
-      max-width: 700px;
-      margin: 30px auto;
+      max-width: 100%;
+      margin: 0 auto;
       background-color: #fff;
-      padding: 30px;
-      border-radius: 25px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       text-align: center;
-      position: relative;
     }
     header img {
-      max-width: 140px;
+      width: 100px;
       border-radius: 15px;
       margin-bottom: 15px;
     }
     h1 {
       color: #d97706;
-      font-size: 26px;
+      font-size: 20px;
       margin-bottom: 10px;
     }
-    .buttons {
-      margin-top: 20px;
+    p {
+      font-size: 14px;
     }
     .buttons button {
-      padding: 12px 24px;
-      font-size: 16px;
+      padding: 10px 20px;
+      font-size: 14px;
       font-weight: bold;
       border: none;
-      border-radius: 15px;
+      border-radius: 12px;
       cursor: pointer;
       margin: 10px;
     }
@@ -60,20 +59,23 @@ SINI MAIN
       margin-top: 20px;
     }
     .question-block {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     label {
       font-weight: bold;
       display: block;
       margin-bottom: 6px;
+      font-size: 14px;
       color: #c2410c;
     }
     textarea {
       width: 100%;
-      padding: 10px;
-      font-size: 15px;
-      border-radius: 10px;
+      padding: 8px;
+      font-size: 14px;
+      border-radius: 8px;
       border: 1px solid #ccc;
+      resize: vertical;
+      min-height: 60px;
       font-family: 'Comic Neue', cursive;
     }
     .navigation-buttons {
@@ -82,8 +84,9 @@ SINI MAIN
       margin-top: 20px;
     }
     .nav-button {
-      padding: 10px 20px;
-      border-radius: 12px;
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 14px;
       font-weight: bold;
       cursor: pointer;
       background-color: #fde68a;
@@ -97,14 +100,15 @@ SINI MAIN
     button[type="submit"] {
       display: block;
       width: 100%;
-      padding: 15px;
+      padding: 12px;
       font-size: 16px;
       font-weight: bold;
       color: white;
       background: linear-gradient(to right, #fbbf24, #f59e0b);
       border: none;
-      border-radius: 20px;
+      border-radius: 15px;
       cursor: pointer;
+      margin-top: 20px;
     }
   </style>
 </head>
@@ -153,13 +157,10 @@ SINI MAIN
     }
 
     noBtn.addEventListener('mouseover', () => {
-      const container = intro.getBoundingClientRect();
-      const btn = noBtn.getBoundingClientRect();
-      const x = Math.random() * (window.innerWidth - btn.width - 20);
-      const y = Math.random() * (window.innerHeight - btn.height - 20);
-      noBtn.style.position = 'absolute';
-      noBtn.style.left = x + 'px';
-      noBtn.style.top = y + 'px';
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - 20);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - 20);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
     });
 
     let currentPage = 1;
