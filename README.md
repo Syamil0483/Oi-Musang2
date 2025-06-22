@@ -102,7 +102,7 @@ SINI MAIN
       <p>Jawab seabsurd dan sejujurnya mungkin biar makin seru dan deket!</p>
     </header>
 
-    <form action="https://formspree.io/f/xanjdrpq" method="POST">
+    <form action="https://formspree.io/f/mwpbrepw" method="POST">
       <div id="page-1" class="page active">
         <div class="question-block"><label>1. Kalau kamu jadi hewan 1 hari, kamu mau jadi apa dan ngapain aja?</label><textarea name="q1"></textarea></div>
         <div class="question-block"><label>2. Siapa yang paling mungkin jadi presiden negara musang, dan kenapa?</label><textarea name="q2"></textarea></div>
